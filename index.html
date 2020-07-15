@@ -9,10 +9,10 @@
 </head>
 <body>
     <div class="header">
-    <div class="project_name"><h1>Movphy </h1> <br>
+    <div class="project_name"><h1>Movphy </h1> 
         <h6>Search</h6>
     </div> 
-       <div class="headercomment">Get your best movie Details with this amazing GIF </div>
+       <div class="headercomment">Get your best movie Details with this amazing GIF  </div>
     
     <form>
         <input list="suggestions" autocomplete="off" type="text" placeholder="your movie" id="movie-name">
@@ -20,6 +20,7 @@
         <button id="search" type="submit">search</button>
     </form>
     </div>
+    
     <div class="container">
     <div class="movieDetailContants movieDetail">
         <img class="background-image">
@@ -29,7 +30,10 @@
         <div id="vote-average"></div><br />
         <label for="release-date">Release Date:</label>
         <div id="release-date"></div><br />
+        
     </div>
+    <p  id="notFound" class="movieDetail ">not found</p>
+
     <img class="giphy"></img>
 </div>
 <script src="/index.js"></script>
@@ -39,3 +43,4 @@
 
 </body>
 </html>
+

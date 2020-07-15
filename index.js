@@ -5,6 +5,7 @@ const Overview = document.querySelector("#overview");
 const VoteAverage = document.querySelector("#vote-average");
 const ReleaseDate = document.querySelector("#release-date");
 const suggestions=document.querySelector("#suggestions")
+const notFound=document.querySelector("#notFound")
 const container=document.querySelector(".background-image")
 
 
@@ -38,12 +39,26 @@ form.addEventListener("submit", (event) => {
       return response.json();
     })
     .then((json) => {
-        movieDetail.classList.remove("movieDetail");
-        giphy.style.display="block";
-      console.log(json);
-     Overview.textContent =  json.results[0].overview;
-     VoteAverage.textContent = json.results[0].vote_average;
-     ReleaseDate.textContent = json.results[0].release_date;
+
+      movieDetail.classList.toggle("movieDetail",json.results.length  === 0)
+      giphy.style.display = json.results.length  !== 0 && 'block'
+      notFound.classList.toggle("movieDetail",json.results.length  !== 0)
+
+        if(json.results.length  !== 0){
+
+        Overview.textContent =  json.results[0].overview;
+        VoteAverage.textContent = json.results[0].vote_average;
+        ReleaseDate.textContent = json.results[0].release_date;
+      }
+      else{
+        Overview.textContent =  "";
+        VoteAverage.textContent = "";
+        ReleaseDate.textContent = "";
+        giphy.src = "";
+
+      }
+
+      
     })
     .catch((error) => {
       console.error(error);
@@ -63,14 +78,6 @@ form.addEventListener("submit", (event) => {
     })
     .catch((error) => {
       console.error(error);
+
     });
 });
-
-//               if (error.message === "404") {
-//                 output.textContent = `⚠️ Couldn't find "${name}"`;
-//               } else {
-//                 output.textContent = "⚠️ Something went wrong";
-//               }
-//             });
-//         });
-//       </script>
