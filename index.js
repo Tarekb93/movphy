@@ -1,12 +1,28 @@
 const form = document.querySelector("form");
 const movieName = document.querySelector("#movie-name");
-const box1 = document.querySelector(".box1");
-const box1Overview = document.querySelector("#overview");
-const box1VoteAverage = document.querySelector("#vote-average");
-const box1ReleaseDate = document.querySelector("#release-date");
+const movieDetail = document.querySelector(".movieDetail");
+const Overview = document.querySelector("#overview");
+const VoteAverage = document.querySelector("#vote-average");
+const ReleaseDate = document.querySelector("#release-date");
+const suggestions=document.querySelector("#suggestions")
 
-const box2 = document.querySelector(".box2");
 
+const giphy = document.querySelector(".giphy");
+
+movieName.addEventListener("input",(event)=>{
+    suggestions.innerHTML="";
+
+    fetch(`https://api.giphy.com/v1/gifs/search/tags?q=${encodeURI(
+        movieName.value)}&api_key=K981SlP41yFCsojUx7HMKxw1sxQNbUdF`)
+        .then(response =>response.json())
+        .then(json =>{
+            json.data.forEach(element => {
+                let newOption=document.createElement("option");
+                newOption.value=element.name;
+                suggestions.appendChild(newOption);
+            });
+        })
+})
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   console.log(encodeURI(movieName.value));
@@ -20,11 +36,11 @@ form.addEventListener("submit", (event) => {
       return response.json();
     })
     .then((json) => {
-        box1.classList.remove("box1");
+        movieDetail.classList.remove("movieDetail");
       console.log(json);
-      box1Overview.textContent =  json.results[0].overview;
-      box1VoteAverage.textContent = "Vote-Average: " + json.results[0].vote_average;
-      box1ReleaseDate.textContent = "Release Date: " + json.results[0].release_date;
+     Overview.textContent =  json.results[0].overview;
+     VoteAverage.textContent = json.results[0].vote_average;
+     ReleaseDate.textContent = json.results[0].release_date;
     })
     .catch((error) => {
       console.error(error);
@@ -38,8 +54,8 @@ form.addEventListener("submit", (event) => {
     })
     .then((json) => {
       console.log(json);
-    //   console.log(box2  )
-      box2.src = json.data[0].images.downsized_large.url;
+    //   console.log(giphy  )
+      giphy.src = json.data[0].images.downsized_large.url;
     })
     .catch((error) => {
       console.error(error);

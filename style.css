@@ -1,3 +1,7 @@
-.box1 {
+.container {
+    display: flex;
+}
+
+.movieDetail {
     display:none;
 }
