@@ -1,7 +1,45 @@
 .container {
-    display: flex;
+    display: flex;   
+    color: blanchedalmond;
+
 }
 
 .movieDetail {
     display:none;
+    
+}
+body {
+    background-color: black;
+}
+
+.header {
+        background-image: url(https://steamuserimages-a.akamaihd.net/ugc/964234420710695250/0F18EBD7CB2323D63AE0BF1ACA7E97F38AD2EFCC/);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 280px;;
+    background-position: bottom;
+    background-position-y: -20vw ;
+    
+    
+}    
+
+.project_name {
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    background-color: azure;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    justify-items: baseline;
+    align-items: center;
+}
+
+.headercomment {
+    display: flex;
+    justify-content: center;
+    background-color: azure;
 }

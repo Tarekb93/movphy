@@ -25,6 +25,7 @@ movieName.addEventListener("input",(event)=>{
 })
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  window.scroll(0,0)
   console.log(encodeURI(movieName.value));
   fetch(
     `https://api.themoviedb.org/3/search/movie?api_key=b60ae9b51cc2590a794266a877ec91d5&query=${encodeURI(
