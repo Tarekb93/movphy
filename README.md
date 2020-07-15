@@ -15,5 +15,12 @@ Designing an interactive website were user can search for a movie and gitting 2 
 2) Giphy - A related Giphy for his search
 -----------------------
 APPI's:
+Giphy - Lots and lots of GIFs - [https://developers.giphy.com/]
+The Movie DB - Lots of info about all kinds of movies, a bit like IMDB - [https://www.themoviedb.org/documentation/api]
+-----------------------
+Defficulties:
+Abeer's APROVE on the img Cover.
+GIT ADD GET PUSH GET PULL MERGE ORIGIN
+-----------------------
 
 
