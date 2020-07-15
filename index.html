@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <link href="/style.css" rel="stylesheet">
     <title>Movphy</title>
 </head>
@@ -12,17 +13,17 @@
         <h6>Search</h6>
     </div> 
        <div class="headercomment">Get your best movie Details with this amazing GIF </div>
-    
-    <form>
-        <input list="suggestions" autocomplete="off" type="text" placeholder="your movie" id="movie-name"><br><br><br>
-        <datalist id="suggestions"></datalist>
-        <button id="search" type="submit">search</button>
-    </div>
+       <form>
+           <input list="suggestions" autocomplete="off" type="text" placeholder="your movie" id="movie-name">
+           <datalist id="suggestions"></datalist>
+           <button id="search" type="submit">search</button>
+        </div>
     </form>
     <div style="display: flex;">
+        <img class="background-image">
 
         <div class="container">
-            <div class="movieDetail">
+            <div class="movieDetailContants movieDetail">
                 <label for="overview" class="title">Overview </label>
                 <div id="overview" class="content" ></div><br />
             </div>
@@ -44,6 +45,7 @@
         
         <img class="giphy"></img>
     </div>
+
 <script src="/index.js"></script>
     
 
