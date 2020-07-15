@@ -19,18 +19,31 @@
         <button id="search" type="submit">search</button>
     </div>
     </form>
-    <div class="container">
-    <div class="movieDetail">
-        <label for="overview">Overview</label>
-        <div id="overview"></div><br />
-        <label for="vote-average">Vote Average:</label>
-        <div id="vote-average"></div><br />
-        <label for="release-date">Release Date:</label>
-        <div id="release-date"></div><br />
-    </div>
+    <div style="display: flex;">
 
-    <img class="giphy"></img>
-</div>
+        <div class="container">
+            <div class="movieDetail">
+                <label for="overview" class="title">Overview </label>
+                <div id="overview" class="content" ></div><br />
+            </div>
+            <div style="display: flex; justify-content: center;">
+                
+                <div class="split left">
+                    <label for="vote-average" class="title">Vote Average &#11088;</label>
+                    <div id="vote-average" class="content"></div>
+                </div>
+                <div class="split right">
+                    
+                    
+                    <label for="release-date" class="title">Release Date</label>
+                    <div id="release-date" class="content"></div><br />
+                </div>    
+            </div> 
+            
+        </div>
+        
+        <img class="giphy"></img>
+    </div>
 <script src="/index.js"></script>
     
 

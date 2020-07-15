@@ -1,15 +1,47 @@
 .container {
     display: flex;   
-    color: blanchedalmond;
-
+    color: white;
+    flex-direction: column;
 }
-
+.container .title 
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+   
+  }
 .movieDetail {
     display:none;
     
 }
-body {
-    background-color: black;
+.content{
+    font-size: 20px;
+    padding: 15px;
+}
+
+.title{
+ font-weight: lighter;
+ padding: 10px;
+ font-size: 20px;
+ font-style: italic;
+}
+body { background-color: black
+    ;
 }
 
 .header {
