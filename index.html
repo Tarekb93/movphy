@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <link href="/style.css" rel="stylesheet">
     <title>Movphy</title>
 </head>
@@ -14,13 +15,14 @@
        <div class="headercomment">Get your best movie Details with this amazing GIF </div>
     
     <form>
-        <input list="suggestions" autocomplete="off" type="text" placeholder="your movie" id="movie-name"><br><br><br>
+        <input list="suggestions" autocomplete="off" type="text" placeholder="your movie" id="movie-name">
         <datalist id="suggestions"></datalist>
         <button id="search" type="submit">search</button>
-    </div>
     </form>
+    </div>
     <div class="container">
-    <div class="movieDetail">
+    <div class="movieDetailContants movieDetail">
+        <img class="background-image">
         <label for="overview">Overview</label>
         <div id="overview"></div><br />
         <label for="vote-average">Vote Average:</label>
@@ -28,7 +30,6 @@
         <label for="release-date">Release Date:</label>
         <div id="release-date"></div><br />
     </div>
-
     <img class="giphy"></img>
 </div>
 <script src="/index.js"></script>

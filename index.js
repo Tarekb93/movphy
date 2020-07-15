@@ -5,6 +5,7 @@ const Overview = document.querySelector("#overview");
 const VoteAverage = document.querySelector("#vote-average");
 const ReleaseDate = document.querySelector("#release-date");
 const suggestions=document.querySelector("#suggestions")
+const container=document.querySelector(".background-image")
 
 
 const giphy = document.querySelector(".giphy");
@@ -38,6 +39,7 @@ form.addEventListener("submit", (event) => {
     })
     .then((json) => {
         movieDetail.classList.remove("movieDetail");
+        giphy.style.display="block";
       console.log(json);
      Overview.textContent =  json.results[0].overview;
      VoteAverage.textContent = json.results[0].vote_average;
@@ -57,6 +59,7 @@ form.addEventListener("submit", (event) => {
       console.log(json);
     //   console.log(giphy  )
       giphy.src = json.data[0].images.downsized_large.url;
+      container.src = json.data[0].images.original_still.url
     })
     .catch((error) => {
       console.error(error);
