@@ -6,6 +6,7 @@ const VoteAverage = document.querySelector("#vote-average");
 const ReleaseDate = document.querySelector("#release-date");
 const suggestions=document.querySelector("#suggestions")
 const notFound=document.querySelector("#notFound")
+const container=document.querySelector(".background-image")
 
 
 const giphy = document.querySelector(".giphy");
@@ -40,7 +41,7 @@ form.addEventListener("submit", (event) => {
     .then((json) => {
 
       movieDetail.classList.toggle("movieDetail",json.results.length  === 0)
-      giphy.classList.toggle("movieDetail",json.results.length  === 0)
+      giphy.style.display = json.results.length  !== 0 && 'block'
       notFound.classList.toggle("movieDetail",json.results.length  !== 0)
 
         if(json.results.length  !== 0){
@@ -73,20 +74,10 @@ form.addEventListener("submit", (event) => {
       console.log(json);
     //   console.log(giphy  )
       giphy.src = json.data[0].images.downsized_large.url;
+      container.src = json.data[0].images.original_still.url
     })
     .catch((error) => {
       console.error(error);
 
     });
 });
-
-
-// if (error.message === "404") {
-//   output.textContent = `⚠️ Couldn't find "${name}"`;
-// } else {
-//   output.textContent = "⚠️ Something went wrong";
-// }
-
-//             });
-//         });
-//       </script>
