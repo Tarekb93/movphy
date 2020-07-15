@@ -133,3 +133,8 @@ height: 300px;
     background-color: azure;
 }
 
+#notFound {
+    text-align: center;
+    width: 100%;
+    color: white;
+}

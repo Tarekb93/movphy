@@ -9,17 +9,17 @@
 </head>
 <body>
     <div class="header">
-    <div class="project_name"><h1>Movphy </h1> <br>
+    <div class="project_name"><h1>Movphy </h1> 
         <h6>Search</h6>
     </div> 
-       <div class="headercomment">Get your best movie Details with this amazing GIF </div>
+       <div class="headercomment">Get your best movie Details with this amazing GIF  </div>
        <form>
            <input list="suggestions" autocomplete="off" type="text" placeholder="your movie" id="movie-name">
            <datalist id="suggestions"></datalist>
            <button id="search" type="submit">search</button>
         </div>
     </form>
-    <div style="display: flex;">
+    <div style="display: flex; justify-content: space-between;">
         <img class="background-image">
 
         <div class="container">
@@ -42,9 +42,11 @@
             </div> 
             
         </div>
+    <p  id="notFound" class="movieDetail ">not found</p>
         
         <img class="giphy"></img>
     </div>
+
 
 <script src="/index.js"></script>
     
@@ -53,3 +55,4 @@
 
 </body>
 </html>
+
