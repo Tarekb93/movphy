@@ -1,3 +1,22 @@
 .box1 {
     display:none;
 }
+
+.header {
+    background-color: aqua;
+    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/964234420710695250/0F18EBD7CB2323D63AE0BF1ACA7E97F38AD2EFCC/);
+    background-attachment: fixed;
+    background-position: ;
+}    
+
+.project_name {
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    
+}
