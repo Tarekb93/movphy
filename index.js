@@ -9,6 +9,8 @@ const container=document.querySelector(".background-image")
 
 
 const giphy = document.querySelector(".giphy");
+const leftSplit = document.querySelectorAll(".split")[0];
+const rightSplit = document.querySelectorAll(".split")[1];
 
 movieName.addEventListener("input",(event)=>{
     suggestions.innerHTML="";
@@ -40,7 +42,8 @@ form.addEventListener("submit", (event) => {
     .then((json) => {
         movieDetail.style.display="block";
         giphy.style.display="block";
-        split.style.display="block";
+        leftSplit.style.display="block";
+        rightSplit.style.display="block";
       console.log(json);
      Overview.textContent =  json.results[0].overview;
      VoteAverage.textContent = json.results[0].vote_average;
