@@ -1,19 +1,101 @@
-.container {
-    display: flex;
+#movie-name {
+    width: 40%;
+    margin: 50px;
+    background-origin: padding-box; 
+    border:223054 groove 4px;
+    padding: 10px;
+    border-radius: 20px;
 }
 
+#search {
+    border:223054 groove;
+    border-radius: 20px;
+    margin: -25px;
+    font-style: italic;
+
+}
+.container {
+    display: flex;   
+    color: blanchedalmond;
+}
+.background-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: contain;
+    opacity: .3;
+}
+.movieDetailContants{
+    position: relative;
+
+}
 .movieDetail {
     display:none;
+    
 }
-@media screen and (max-width:700px) {
+body {
+    background-color: black;
+}
+
+.header {
+        background-image: url(/movie_poster_design.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 280px;;
+    background-position: bottom;
+    background-position-y: 103px ;
+    /* -webkit-filter: blur(1px); */
+    
+    
+}    
+
+.project_name {
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    background-color: azure;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    justify-items: baseline;
+    align-items: center;
+    flex-direction: column;
+}
+@media screen and (max-width:800px) {
     .container{
     display: flex;
     flex-direction: column;
+   
     } 
-}
-    
-.giphy {
-border-radius: 0%;
-border-color: black;
-width: 200px;
+   .giphy {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
    }
+   .movieDetail {
+
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+   }
+}  
+.giphy {
+    display: none;
+border-radius: 8px;
+width: 300px;
+height: 300px;
+   }
+
+.headercomment {
+    display: flex;
+    justify-content: center;
+    background-color: azure;
+}
+

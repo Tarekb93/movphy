@@ -5,6 +5,7 @@ const Overview = document.querySelector("#overview");
 const VoteAverage = document.querySelector("#vote-average");
 const ReleaseDate = document.querySelector("#release-date");
 const suggestions=document.querySelector("#suggestions")
+const container=document.querySelector(".background-image")
 
 
 const giphy = document.querySelector(".giphy");
@@ -25,6 +26,7 @@ movieName.addEventListener("input",(event)=>{
 })
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  window.scroll(0,0)
   console.log(encodeURI(movieName.value));
   fetch(
     `https://api.themoviedb.org/3/search/movie?api_key=b60ae9b51cc2590a794266a877ec91d5&query=${encodeURI(
@@ -37,6 +39,7 @@ form.addEventListener("submit", (event) => {
     })
     .then((json) => {
         movieDetail.classList.remove("movieDetail");
+        giphy.style.display="block";
       console.log(json);
      Overview.textContent =  json.results[0].overview;
      VoteAverage.textContent = json.results[0].vote_average;
@@ -56,6 +59,7 @@ form.addEventListener("submit", (event) => {
       console.log(json);
     //   console.log(giphy  )
       giphy.src = json.data[0].images.downsized_large.url;
+      container.src = json.data[0].images.original_still.url
     })
     .catch((error) => {
       console.error(error);
