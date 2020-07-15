@@ -8,19 +8,29 @@
 </head>
 <body>
     <div class="header">
-    <div class="project_name"><h1>Movphy</h1></div>
+    <div class="project_name"><h1>Movphy </h1> <br>
+        <h6>Search</h6>
+    </div> 
+       <div class="headercomment">Get your best movie Details with this amazing GIF </div>
+    
     <form>
-        <input type="text" placeholder="your movie" id="movie-name"><br><br><br>
+        <input list="suggestions" autocomplete="off" type="text" placeholder="your movie" id="movie-name"><br><br><br>
+        <datalist id="suggestions"></datalist>
         <button id="search" type="submit">search</button>
-    </form>
     </div>
-    <div class="box1">
+    </form>
+    <div class="container">
+    <div class="movieDetail">
         <label for="overview">Overview</label>
         <div id="overview"></div><br />
+        <label for="vote-average">Vote Average:</label>
         <div id="vote-average"></div><br />
+        <label for="release-date">Release Date:</label>
         <div id="release-date"></div><br />
     </div>
-    <img class="box2"></img>
+
+    <img class="giphy"></img>
+</div>
 <script src="/index.js"></script>
     
 
