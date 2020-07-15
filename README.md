@@ -20,7 +20,8 @@ The Movie DB - Lots of info about all kinds of movies, a bit like IMDB - [https:
 -----------------------
 Defficulties:
 Abeer's APROVE on the img Cover.
-GIT ADD GET PUSH GET PULL MERGE ORIGIN
+GIT ADD GIT PUSH GIT PULL MERGE ORIGIN (GIT COMMANDS)
+To get the API url
 -----------------------
 
 
