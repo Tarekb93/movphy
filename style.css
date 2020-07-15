@@ -5,3 +5,15 @@
 .movieDetail {
     display:none;
 }
+@media screen and (max-width:700px) {
+    .container{
+    display: flex;
+    flex-direction: column;
+    } 
+}
+    
+.giphy {
+border-radius: 0%;
+border-color: black;
+width: 200px;
+   }
