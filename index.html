@@ -13,29 +13,41 @@
         <h6>Search</h6>
     </div> 
        <div class="headercomment">Get your best movie Details with this amazing GIF  </div>
-    
-    <form>
-        <input list="suggestions" autocomplete="off" type="text" placeholder="your movie" id="movie-name">
-        <datalist id="suggestions"></datalist>
-        <button id="search" type="submit">search</button>
+       <form>
+           <input list="suggestions" autocomplete="off" type="text" placeholder="your movie" id="movie-name">
+           <datalist id="suggestions"></datalist>
+           <button id="search" type="submit">search</button>
+        </div>
     </form>
-    </div>
-    
-    <div class="container">
-    <div class="movieDetailContants movieDetail">
+    <div style="display: flex; justify-content: space-between;">
         <img class="background-image">
-        <label for="overview">Overview</label>
-        <div id="overview"></div><br />
-        <label for="vote-average">Vote Average:</label>
-        <div id="vote-average"></div><br />
-        <label for="release-date">Release Date:</label>
-        <div id="release-date"></div><br />
-        
-    </div>
-    <p  id="notFound" class="movieDetail ">not found</p>
 
-    <img class="giphy"></img>
-</div>
+        <div class="container">
+            <div class="movieDetailContants movieDetail">
+                <label for="overview" class="title">Overview </label>
+                <div id="overview" class="content" ></div><br />
+            </div>
+            <div style="display: flex; justify-content: center;">
+                
+                <div class="split left">
+                    <label for="vote-average" class="title">Vote Average &#11088;</label>
+                    <div id="vote-average" class="content"></div>
+                </div>
+                <div class="split right">
+                    
+                    
+                    <label for="release-date" class="title">Release Date</label>
+                    <div id="release-date" class="content"></div><br />
+                </div>    
+            </div> 
+            
+        </div>
+    <p  id="notFound" class="movieDetail ">not found</p>
+        
+        <img class="giphy"></img>
+    </div>
+
+
 <script src="/index.js"></script>
     
 

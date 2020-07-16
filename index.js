@@ -10,6 +10,8 @@ const container=document.querySelector(".background-image")
 
 
 const giphy = document.querySelector(".giphy");
+const leftSplit = document.querySelectorAll(".split")[0];
+const rightSplit = document.querySelectorAll(".split")[1];
 
 movieName.addEventListener("input",(event)=>{
     suggestions.innerHTML="";
@@ -39,13 +41,15 @@ form.addEventListener("submit", (event) => {
       return response.json();
     })
     .then((json) => {
-
+      
       movieDetail.classList.toggle("movieDetail",json.results.length  === 0)
       giphy.style.display = json.results.length  !== 0 && 'block'
       notFound.classList.toggle("movieDetail",json.results.length  !== 0)
-
-        if(json.results.length  !== 0){
-
+      
+      if(json.results.length  !== 0){
+        
+        leftSplit.style.display="block";
+        rightSplit.style.display="block";
         Overview.textContent =  json.results[0].overview;
         VoteAverage.textContent = json.results[0].vote_average;
         ReleaseDate.textContent = json.results[0].release_date;
