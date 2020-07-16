@@ -72,7 +72,7 @@ body {
 }
 
 .header {
-  background-image: url(/img/movie_poster_design.jpg);
+  background-image: url(./img/movie_poster_design.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 280px;
