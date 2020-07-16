@@ -1,7 +1,7 @@
 # movphy
 Check our Website (URL)
 ----------------------
-Using Movphy website you gain access to basic information about your movie plus a shot of unforgottable moment from the movie shown as a Giphy. In this website we used two different API's from two different websites.
+Using Movphy website you gain access to basic information about your movie plus a shot of unforgottable moment from the movie shown as a Giphy. In this website we used three different API's from two different websites.
 
 -----------------------
 Our first plan for the Website was:
