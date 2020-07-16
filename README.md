@@ -7,7 +7,7 @@ https://webahead6.github.io/movphy/index
 -----------------------
 Our first plan for the Website was:
 
-<img src="firstplan.jpg" alt="">
+<img src="./img/firstplan.jpg" alt="">
 -----------------------
 
 Project Goals:
