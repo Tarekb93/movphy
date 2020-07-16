@@ -1,5 +1,5 @@
 # movphy
-Check our Website (URL)
+ Our Website (URL)
 ----------------------
 Using Movphy website you gain access to basic information about your movie plus a shot of unforgottable moment from the movie shown as a Giphy. In this website we used three different API's from two different websites.
 
@@ -20,7 +20,7 @@ APPI's:
 Giphy - Lots and lots of GIFs - [https://developers.giphy.com/]
 The Movie DB - Lots of info about all kinds of movies, a bit like IMDB - [https://www.themoviedb.org/documentation/api]
 -----------------------
-Defficulties:
+Difficulties:
 Abeer's APROVE on the img Cover.
 GIT ADD GIT PUSH GIT PULL MERGE ORIGIN (GIT COMMANDS)
 To get the API url
